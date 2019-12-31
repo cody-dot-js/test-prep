@@ -1,0 +1,12 @@
+{
+  "name": "test-prep",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "riteway": "^6.1.1"
+  },
+  "scripts": {
+    "test": "riteway src/**/*.test.js"
+  }
+}
