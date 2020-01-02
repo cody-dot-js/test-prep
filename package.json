@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "microtime": "^3.0.0",
     "riteway": "^6.1.1"
   },
   "scripts": {
