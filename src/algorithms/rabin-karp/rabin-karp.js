@@ -1,7 +1,7 @@
 const d = 256;
 
 // O(M + N), where M < N, worst case O(MN), where O(N^2) if M === N
-function search(text = "", pattern = "", q = 101) {
+function search(text = "", pattern = "", q = 65537) {
   if (!text && pattern) {
     return -1;
   }

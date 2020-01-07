@@ -5,9 +5,10 @@
   "license": "MIT",
   "devDependencies": {
     "microtime": "^3.0.0",
-    "riteway": "^6.1.1"
+    "riteway": "^6.1.1",
+    "tap-color": "^1.1.0"
   },
   "scripts": {
-    "test": "riteway src/**/*.test.js"
+    "test": "riteway src/**/*.test.js | tap-color"
   }
 }
