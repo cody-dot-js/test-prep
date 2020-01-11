@@ -3,13 +3,13 @@ const LinkedList = require("./linked-list");
 
 describe("LinkedList", async assert => {
   {
-    // empty() on creation
+    // isEmpty() on creation
     const list = new LinkedList();
 
     assert({
       given: "empty list",
       should: "return true",
-      actual: list.empty(),
+      actual: list.isEmpty(),
       expected: true
     });
   }
@@ -30,9 +30,9 @@ describe("LinkedList", async assert => {
     });
 
     assert({
-      given: "list.empty()",
+      given: "list.isEmpty()",
       should: "return false",
-      actual: list.empty(),
+      actual: list.isEmpty(),
       expected: false
     });
 
@@ -60,9 +60,9 @@ describe("LinkedList", async assert => {
     });
 
     assert({
-      given: "list.empty()",
+      given: "list.isEmpty()",
       should: "return false",
-      actual: list.empty(),
+      actual: list.isEmpty(),
       expected: false
     });
 
@@ -90,9 +90,9 @@ describe("LinkedList", async assert => {
     });
 
     assert({
-      given: "list.empty()",
+      given: "list.isEmpty()",
       should: "return false",
-      actual: list.empty(),
+      actual: list.isEmpty(),
       expected: false
     });
 

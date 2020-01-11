@@ -7,7 +7,7 @@ class LinkedList {
     this.length = 0;
   }
 
-  empty() {
+  isEmpty() {
     return this.length === 0;
   }
 
