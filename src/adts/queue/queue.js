@@ -1,12 +1,31 @@
-function Queue() {
-  this.q = [];
+const LinkedList = require("../linked-list/linked-list");
 
-  return {
-    enqueue: item => this.q.push(item),
-    length: () => this.q.length,
-    dequeue: () => this.q.shift(),
-    toArray: () => [...this.q]
-  };
+class Queue {
+  constructor() {
+    this.list = new LinkedList();
+  }
+
+  length() {
+    return this.list.length;
+  }
+
+  enqueue(item) {
+    this.list.append(item);
+
+    return this;
+  }
+
+  dequeue() {
+    return this.list.removeHead();
+  }
+
+  isEmpty() {
+    return this.list.isEmpty();
+  }
+
+  toArray() {
+    return this.list.toArray();
+  }
 }
 
 module.exports = Queue;

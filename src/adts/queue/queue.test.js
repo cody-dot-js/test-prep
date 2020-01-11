@@ -3,34 +3,33 @@ const Queue = require("./queue");
 
 describe("Queue", async assert => {
   {
-    // enqueue nothing
-    const q = Queue();
-    q.enqueue();
+    // empty on creation
+    const q = new Queue();
 
     assert({
-      given: "nothing",
-      should: "enqueue `undefined`",
-      actual: q.toArray(),
-      expected: [undefined]
+      given: "empty queue",
+      should: "return true",
+      actual: q.isEmpty(),
+      expected: true
     });
   }
 
   {
     // dequeue nothing
-    const q = Queue();
+    const q = new Queue();
     const result = q.dequeue();
 
     assert({
       given: "empty queue",
-      should: "dequeue",
+      should: "dequeue null",
       actual: result,
-      expected: undefined
+      expected: null
     });
   }
 
   {
     // toArray on empty queue
-    const q = Queue();
+    const q = new Queue();
     const result = q.toArray();
 
     assert({
@@ -43,7 +42,7 @@ describe("Queue", async assert => {
 
   {
     // toArray returns a _new_ array
-    const q = Queue();
+    const q = new Queue();
     const first = q.toArray();
     const second = q.toArray();
 
@@ -57,7 +56,7 @@ describe("Queue", async assert => {
 
   {
     // enqueue each [1, 2, 3], dequeue returns 1
-    const q = Queue();
+    const q = new Queue();
     [1, 2, 3].forEach(i => q.enqueue(i));
     const result = q.dequeue();
 
@@ -67,11 +66,18 @@ describe("Queue", async assert => {
       actual: result,
       expected: 1
     });
+
+    assert({
+      given: "queue.length()",
+      should: "return 2",
+      actual: q.length(),
+      expected: 2
+    });
   }
 
   {
     // enqueue and dequeue N things
-    const q = Queue();
+    const q = new Queue();
     const list = [1, 2, 3, 4, 5];
     list.forEach(i => q.enqueue(i));
     list.forEach(() => q.dequeue());

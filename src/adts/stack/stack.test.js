@@ -3,8 +3,27 @@ const Stack = require("./stack");
 
 describe("Stack", async assert => {
   {
+    // empty on creation
+    const stack = new Stack();
+
+    assert({
+      given: "new stack",
+      should: "be empty",
+      actual: stack.isEmpty(),
+      expected: true
+    });
+
+    assert({
+      given: "length",
+      should: "is 0",
+      actual: stack.length(),
+      expected: 0
+    });
+  }
+
+  {
     // push nothing
-    const stack = Stack();
+    const stack = new Stack();
     stack.push();
 
     assert({
@@ -17,20 +36,20 @@ describe("Stack", async assert => {
 
   {
     // pop nothing
-    const stack = Stack();
+    const stack = new Stack();
     const result = stack.pop();
 
     assert({
       given: "empty Stack",
       should: "pop",
       actual: result,
-      expected: undefined
+      expected: null
     });
   }
 
   {
     // toArray on empty Stack
-    const stack = Stack();
+    const stack = new Stack();
     const result = stack.toArray();
 
     assert({
@@ -43,7 +62,7 @@ describe("Stack", async assert => {
 
   {
     // toArray returns a _new_ array
-    const stack = Stack();
+    const stack = new Stack();
     const first = stack.toArray();
     const second = stack.toArray();
 
@@ -57,7 +76,7 @@ describe("Stack", async assert => {
 
   {
     // push each [1, 2, 3], pop returns 3
-    const stack = Stack();
+    const stack = new Stack();
     [1, 2, 3].forEach(i => stack.push(i));
     const result = stack.pop();
 
@@ -71,7 +90,7 @@ describe("Stack", async assert => {
 
   {
     // push and pop N things
-    const stack = Stack();
+    const stack = new Stack();
     const list = [1, 2, 3, 4, 5];
     list.forEach(i => stack.push(i));
     list.forEach(() => stack.pop());
