@@ -1,6 +1,6 @@
 const { describe } = require("riteway");
 const isBalanced = require("./isBalanced");
-const BinarySearchTree = require("../../adts/trees/bst/binarySearchTree")
+const BinarySearchTree = require("../../adts/trees/bst/binarySearchTree");
 
 describe("isBalanced()", async assert => {
   {
@@ -18,7 +18,7 @@ describe("isBalanced()", async assert => {
   {
     // single node tree
     const bst = new BinarySearchTree();
-    bst.insert(1)
+    bst.insert(1);
 
     assert({
       given: "single node tree",
@@ -31,7 +31,7 @@ describe("isBalanced()", async assert => {
   {
     // two node balanced tree
     const bst = new BinarySearchTree();
-    bst.insertAll(5, 1)
+    bst.insertAll(5, 1);
 
     assert({
       given: "two node tree",
@@ -44,7 +44,7 @@ describe("isBalanced()", async assert => {
   {
     // three node balanced tree
     const bst = new BinarySearchTree();
-    bst.insertAll(5, 1, 6)
+    bst.insertAll(5, 1, 6);
 
     assert({
       given: "three node balanced tree",
@@ -57,7 +57,7 @@ describe("isBalanced()", async assert => {
   {
     // three node unbalanced tree
     const bst = new BinarySearchTree();
-    bst.insertAll(1, 5, 6)
+    bst.insertAll(1, 5, 6);
 
     assert({
       given: "three node unbalanced tree",
@@ -70,7 +70,7 @@ describe("isBalanced()", async assert => {
   {
     // ten node unbalanced tree
     const bst = new BinarySearchTree();
-    bst.insertAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    bst.insertAll(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
     assert({
       given: "ten node unbalanced tree",
@@ -83,7 +83,7 @@ describe("isBalanced()", async assert => {
   {
     // ten node balanced tree
     const bst = new BinarySearchTree();
-    bst.insertAll(6, 2, 3, 1, 8, 7, 6, 9, 10)
+    bst.insertAll(6, 3, 2, 4, 1, 5, 9, 8, 10, 7);
 
     assert({
       given: "ten node balanced tree",

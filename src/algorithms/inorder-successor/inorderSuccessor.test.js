@@ -1,6 +1,6 @@
 const { describe } = require("riteway");
 const inorderSuccessor = require("./inorderSuccessor");
-const BinarySearchTree = require("../../adts/trees/bst/binarySearchTree")
+const BinarySearchTree = require("../../adts/trees/bst/binarySearchTree");
 
 describe("inorderSuccessor()", async assert => {
   {
@@ -18,7 +18,7 @@ describe("inorderSuccessor()", async assert => {
   {
     // one node tree
     const bst = new BinarySearchTree();
-    bst.insertAll(1)
+    bst.insertAll(1);
 
     assert({
       given: "one node tree: the root",
@@ -31,7 +31,7 @@ describe("inorderSuccessor()", async assert => {
   {
     // two node tree
     const bst = new BinarySearchTree();
-    bst.insertAll(1, 2)
+    bst.insertAll(1, 2);
 
     assert({
       given: "two node tree: passed the greater number",
@@ -51,7 +51,7 @@ describe("inorderSuccessor()", async assert => {
   {
     // three node tree, linked list (increasing)
     const bst = new BinarySearchTree();
-    bst.insertAll(1, 2, 3)
+    bst.insertAll(1, 2, 3);
 
     assert({
       given: "three node tree, linked list (increasing): the root",
@@ -78,7 +78,7 @@ describe("inorderSuccessor()", async assert => {
   {
     // three node tree, linked list (decreasing)
     const bst = new BinarySearchTree();
-    bst.insertAll(3, 2, 1)
+    bst.insertAll(3, 2, 1);
 
     assert({
       given: "three node tree, linked list (decreasing): the root",
@@ -105,7 +105,7 @@ describe("inorderSuccessor()", async assert => {
   {
     // three node tree, balanced
     const bst = new BinarySearchTree();
-    bst.insertAll(2, 3, 1)
+    bst.insertAll(2, 3, 1);
 
     assert({
       given: "three node tree, balanced: the root",
