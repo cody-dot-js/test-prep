@@ -44,13 +44,8 @@ describe("tree.getRandomNode()", async assert => {
       distribution[data] += 1;
     }
 
-    const distributionPercentages = Object.values(distribution).reduce(
-      (acc, count) => {
-        const percent = (count / N) * 100;
-        acc.push(percent);
-        return acc;
-      },
-      []
+    const distributionPercentages = Object.values(distribution).map(
+      count => (count / N) * 100
     );
 
     function percentDiff(fromV1, toV2) {
