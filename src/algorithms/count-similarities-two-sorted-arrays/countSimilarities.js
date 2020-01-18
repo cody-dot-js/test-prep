@@ -3,7 +3,7 @@ function countSimilarities(lhsSorted = [], rhsSorted = []) {
     j = 0;
   let count = 0;
 
-  while (i < lhsSorted.length) {
+  while (i < lhsSorted.length && j < rhsSorted.length) {
     const left = lhsSorted[i];
     const right = rhsSorted[j];
 
