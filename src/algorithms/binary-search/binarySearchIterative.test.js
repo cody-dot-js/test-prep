@@ -1,7 +1,7 @@
 const { describe } = require("riteway");
-const binarySearch = require("./binary-search");
+const binarySearch = require("./binarySearchIterative");
 
-describe("binarySearch()", async assert => {
+describe("binarySearchIterative()", async assert => {
   assert({
     given: "empty list",
     should: "return -1",
