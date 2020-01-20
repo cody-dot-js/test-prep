@@ -1,5 +1,5 @@
 function binarySearch2D(
-  matrix = [[]],
+  matrix = [[]], // row-major order
   key,
   numCols = matrix[0].length,
   numRows = matrix.length
@@ -8,7 +8,7 @@ function binarySearch2D(
   let end = numCols * numRows - 1;
 
   while (start <= end) {
-    const middle = Math.floor(start + (end - start + 1) / 2);
+    const middle = Math.floor(start + (end - start) / 2);
     const R = Math.floor(middle / numCols);
     const C = middle % numCols;
     const value = matrix[R][C];
