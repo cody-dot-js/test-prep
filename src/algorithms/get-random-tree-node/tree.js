@@ -18,17 +18,17 @@ class Tree {
     return this.root.getIthNode(i);
   }
 
-  insertAllInOrder(...values) {
-    values.map(value => this.insertInOrder(value));
+  insertAll(...values) {
+    values.map(value => this.insert(value));
 
     return this;
   }
 
-  insertInOrder(value) {
+  insert(value) {
     if (!this.root) {
       this.root = new TreeNode(value);
     } else {
-      this.root.insertInOrder(value);
+      this.root.insert(value);
     }
 
     return this;

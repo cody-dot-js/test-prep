@@ -6,18 +6,18 @@ class TreeNode {
     this.right = null;
   }
 
-  insertInOrder(data) {
+  insert(data) {
     if (data <= this.data) {
       if (!this.left) {
         this.left = new TreeNode(data);
       } else {
-        this.left.insertInOrder(data);
+        this.left.insert(data);
       }
     } else {
       if (!this.right) {
         this.right = new TreeNode(data);
       } else {
-        this.right.insertInOrder(data);
+        this.right.insert(data);
       }
     }
     this.size += 1;
