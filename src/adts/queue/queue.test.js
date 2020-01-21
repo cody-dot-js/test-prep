@@ -68,9 +68,9 @@ describe("Queue", async assert => {
     });
 
     assert({
-      given: "queue.length()",
+      given: "queue.length",
       should: "return 2",
-      actual: q.length(),
+      actual: q.length,
       expected: 2
     });
   }

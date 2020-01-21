@@ -14,9 +14,9 @@ describe("Stack", async assert => {
     });
 
     assert({
-      given: "length",
+      given: "stack.length",
       should: "is 0",
-      actual: stack.length(),
+      actual: stack.length,
       expected: 0
     });
   }

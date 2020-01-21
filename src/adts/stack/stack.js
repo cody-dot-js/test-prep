@@ -1,11 +1,11 @@
-const LinkedList = require("../linked-list/linked-list");
+const LinkedList = require("../linked-list/linkedList");
 
 class Stack {
   constructor() {
     this.list = new LinkedList();
   }
 
-  length() {
+  get length() {
     return this.list.length;
   }
 

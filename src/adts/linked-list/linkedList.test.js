@@ -1,5 +1,5 @@
 const { describe } = require("riteway");
-const LinkedList = require("./linked-list");
+const LinkedList = require("./linkedList");
 
 describe("LinkedList", async assert => {
   {
